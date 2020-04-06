@@ -126,7 +126,7 @@ public extension FloatingPanelBehavior {
     }
 }
 
-@available(iOSApplicationExtension 10.0, *)
+@available(iOS 10.0, *)
 private let defaultBehavior = FloatingPanelDefaultBehavior()
 
 @available(iOS 10.0, *)

@@ -162,7 +162,7 @@ struct LayoutSegment {
     let upper: FloatingPanelPosition?
 }
 
-@available(iOSApplicationExtension 10.0, *)
+@available(iOS 10.0, *)
 class FloatingPanelLayoutAdapter {
     weak var vc: FloatingPanelController!
     private weak var surfaceView: FloatingPanelSurfaceView!
