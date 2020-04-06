@@ -6,10 +6,12 @@
 import Foundation
 import os.log
 
+@available(iOS 10.0, *)
 var log = {
     return Logger()
 }()
 
+@available(iOS 10.0, *)
 struct Logger {
     private let osLog: OSLog
     private let s = DispatchSemaphore(value: 1)

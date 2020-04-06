@@ -5,6 +5,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public protocol FloatingPanelControllerDelegate: class {
     // if it returns nil, FloatingPanelController uses the default layout
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout?
@@ -48,6 +49,7 @@ public protocol FloatingPanelControllerDelegate: class {
     func floatingPanel(_ vc: FloatingPanelController, contentOffsetForPinning trackedScrollView: UIScrollView) -> CGPoint
 }
 
+@available(iOS 10.0, *)
 public extension FloatingPanelControllerDelegate {
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
         return nil
@@ -121,6 +123,7 @@ public enum FloatingPanelPosition: Int {
 ///
 /// A container view controller to display a floating panel to present contents in parallel as a user wants.
 ///
+@available(iOS 10.0, *)
 open class FloatingPanelController: UIViewController {
     /// Constants indicating how safe area insets are added to the adjusted content inset.
     public enum ContentInsetAdjustmentBehavior: Int {
@@ -636,6 +639,7 @@ open class FloatingPanelController: UIViewController {
     }
 }
 
+@available(iOS 10.0, *)
 extension FloatingPanelController {
     private static let dismissSwizzling: Any? = {
         let aClass: AnyClass! = UIViewController.self //object_getClass(vc)
@@ -653,6 +657,7 @@ extension FloatingPanelController {
     }()
 }
 
+@available(iOS 10.0, *)
 public extension UIViewController {
     @objc func fp_original_dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         // Implementation will be replaced by IMP of self.dismiss(animated:completion:)
